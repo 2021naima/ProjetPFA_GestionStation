@@ -2,9 +2,8 @@ package pfaProject.gestionStation.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pfaProject.gestionStation.entities.fournisseur;
-import pfaProject.gestionStation.entities.user;
-import pfaProject.gestionStation.repositories.fournisseurRepo;
+
+import pfaProject.gestionStation.entities.utilisateur;
 import pfaProject.gestionStation.repositories.userRepo;
 
 import java.util.List;
@@ -15,11 +14,11 @@ public class userContreoler   {
     @Autowired
     private userRepo UserRepo ;
     @GetMapping("/users")
-    public List<user> getUser(){
+    public List<utilisateur> getUser(){
         return UserRepo.findAll();
     }
     @PostMapping("/addUser")
-    public List<user> createUser(@RequestBody user User){
+    public List<utilisateur> createUser(@RequestBody utilisateur User){
         UserRepo.save(User);
         return UserRepo.findAll();
     }

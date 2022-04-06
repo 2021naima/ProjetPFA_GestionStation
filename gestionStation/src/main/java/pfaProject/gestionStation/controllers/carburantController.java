@@ -13,7 +13,7 @@ import java.util.List;
 public class carburantController {
     @Autowired
     private carburantRepo carburantRepo;
-    @GetMapping("/ListCraburant")
+    @GetMapping("/carburants")
     public List<carburant> getCarburat(){
         return carburantRepo.findAll();
     }

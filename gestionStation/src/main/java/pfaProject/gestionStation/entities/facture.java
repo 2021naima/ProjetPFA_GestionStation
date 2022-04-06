@@ -1,9 +1,6 @@
 package pfaProject.gestionStation.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,14 +11,22 @@ import java.time.LocalDate;
 @Builder
 @Entity
 public class facture {
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long idFacture;
+    @Getter
+    @Setter
     @Column(name="dateFacture")
     private LocalDate dateFacture;
+    @Getter
+    @Setter
     @Column(name="quantiteProduit")
     private Long quantiteProduit;
+    @Getter
+    @Setter
     @Column(name="montant")
     private Long montant;
 

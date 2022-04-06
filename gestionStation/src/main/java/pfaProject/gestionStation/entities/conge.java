@@ -1,9 +1,6 @@
 package pfaProject.gestionStation.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,11 +11,14 @@ import java.time.LocalDate;
 @Builder
 @Entity
 public class conge {
-
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+    @Getter
+    @Setter
     @Column(name="debut")
     private LocalDate debut;
 
