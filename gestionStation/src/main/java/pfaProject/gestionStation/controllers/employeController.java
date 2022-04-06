@@ -6,7 +6,7 @@ import pfaProject.gestionStation.entities.employe;
 import pfaProject.gestionStation.employeRepo;
 
 import java.util.List;
-@CrossOrigin(origins = "http://localhost:3000/")
+
 @RestController
 @RequestMapping("/api/station")
 public class employeController {
