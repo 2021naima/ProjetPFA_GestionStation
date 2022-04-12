@@ -8,7 +8,7 @@ import pfaProject.gestionStation.repositories.produitRepo;
 
 import java.util.List;
 
-
+@CrossOrigin(origins = { "http://localhost:3000" })
 @RestController
 @RequestMapping("/api/station")
 public class produitController {

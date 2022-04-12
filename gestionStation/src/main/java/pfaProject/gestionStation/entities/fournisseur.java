@@ -9,6 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table
 public class fournisseur {
     @Id
     @Getter

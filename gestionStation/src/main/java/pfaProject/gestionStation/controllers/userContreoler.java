@@ -7,7 +7,7 @@ import pfaProject.gestionStation.entities.utilisateur;
 import pfaProject.gestionStation.repositories.userRepo;
 
 import java.util.List;
-
+@CrossOrigin(origins = { "http://localhost:3000" })
 @RestController
 @RequestMapping("/api/station")
 public class userContreoler   {

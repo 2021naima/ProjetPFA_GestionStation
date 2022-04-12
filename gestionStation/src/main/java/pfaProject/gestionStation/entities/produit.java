@@ -16,16 +16,23 @@ public class produit {
     private Long idProduit;
     @Getter
     @Setter
-    @Column(name="nomProduit")
-    private String nomProduit;
+    @Column(name="designation")
+    private String designation;
+    @Getter
+    @Setter
+    @Column(name = "typeProduit", nullable = false)
+    private String typeproduit;
+
     @Getter
     @Setter
     @Column(name = "prixU", nullable = false)
     private float prixU;
     @Getter
     @Setter
-    @Column(name = "typeProduit", nullable = false)
-    private float typeProduit;
+    @Column(name = "Quantite_restante", nullable = false)
+    private float QuantiteRestante;
+
+
 
 
 }
