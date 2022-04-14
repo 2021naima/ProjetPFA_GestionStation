@@ -16,6 +16,9 @@ public class pompe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long idPompe;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "citerne")
+    private citerne citerne;
 
 
 

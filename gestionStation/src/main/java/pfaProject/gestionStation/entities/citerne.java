@@ -3,6 +3,7 @@ package pfaProject.gestionStation.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +21,9 @@ public class citerne {
     @Setter
     @Column(name="capacite")
     private String capacite;
+    @OneToMany(fetch=FetchType.LAZY)
+    @JoinColumn(name="pompes")
+    private List<pompe> pompes;
 
 
 

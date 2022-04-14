@@ -13,7 +13,11 @@ public class produit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long idProduit;
+    private Long id;
+    @Getter
+    @Setter
+    @Column(name="code")
+    private String codeProduit;
     @Getter
     @Setter
     @Column(name="designation")
@@ -21,7 +25,7 @@ public class produit {
     @Getter
     @Setter
     @Column(name = "typeProduit", nullable = false)
-    private String typeproduit;
+    private String type;
 
     @Getter
     @Setter
@@ -30,7 +34,7 @@ public class produit {
     @Getter
     @Setter
     @Column(name = "Quantite_restante", nullable = false)
-    private float QuantiteRestante;
+    private float quantiteRestante;
 
 
 

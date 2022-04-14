@@ -24,6 +24,10 @@ public class carburant {
     @Setter
     @Column(name = "prixU", nullable = false)
     private float prixU;
+    @Getter
+    @Setter
+    @Column(name = "quantite", nullable = false)
+    private float quantite;
 
 
 
