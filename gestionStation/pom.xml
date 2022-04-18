@@ -63,7 +63,8 @@
 			<scope>compile</scope>
 		</dependency>
 
-	</dependencies>
+
+    </dependencies>
 
 	<build>
 		<plugins>

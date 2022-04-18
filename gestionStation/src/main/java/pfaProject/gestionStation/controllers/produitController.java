@@ -17,11 +17,13 @@ public class produitController {
     public List<produit> getProduit(){
         return produitRepo.findAll();
     }
+
     @PostMapping("/AddProduit")
-    public List<produit> addEmploye (@RequestBody produit prod){
+    public List<produit> addProduct (@RequestBody produit prod){
         produitRepo.save(prod);
         return produitRepo.findAll();
     }
+
     @PutMapping("/update/{id}")
     public ResponseEntity updateProduct(@PathVariable Long id, @RequestBody produit produit) {
         produit currentProduct = produitRepo.findById(id).orElseThrow(RuntimeException::new);
