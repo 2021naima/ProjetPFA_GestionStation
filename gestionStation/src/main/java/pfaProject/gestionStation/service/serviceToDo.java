@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class serviceToDo {
-    public toDoRepository toDoRepository;
+ /*   public toDoRepository toDoRepository;
      public toDo createToDo(List<tache> listTaches){
          toDo todo=new toDo();
          todo.setListTaches(listTaches);
@@ -18,6 +18,6 @@ public class serviceToDo {
          toDoRepository.save(todo);
         return todo;
     }
-
+*/
 
 }

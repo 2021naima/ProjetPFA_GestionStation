@@ -4,19 +4,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pfaProject.gestionStation.entities.employe;
-import pfaProject.gestionStation.employeRepo;
-import pfaProject.gestionStation.entities.produit;
+import pfaProject.gestionStation.repositories.employeRepo;
 
 import java.util.List;
+import java.util.Optional;
+
 @CrossOrigin(origins = { "http://localhost:3000" })
 @RestController
-@RequestMapping("/api/station/employees")
+@RequestMapping("/api/station/employee")
 public class employeController {
     @Autowired
     private employeRepo employeRepo ;
     @GetMapping("/employees")
     public List<employe> getEmploye(){
      return employeRepo.findAll();
+    }
+    @GetMapping("/{id}")
+    public Optional<employe> getEmployeById(@PathVariable Long id){
+        return employeRepo.findById(id);
     }
     @PostMapping("/AddEmp")
     public List<employe> addEmploye (@RequestBody employe emp){
@@ -39,5 +44,10 @@ public class employeController {
         employeRepo.deleteById(id);
         return ResponseEntity.ok().build();
     }
+    @DeleteMapping("/{id}")
+    public Optional<employe> getById(@PathVariable Long id) {
+        return employeRepo.findById(id);
+    }
+
 
 }

@@ -5,24 +5,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.time.LocalDate;
-import java.util.List;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
-public class toDo {
+public class Achat {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    private LocalDate Date;
- /*  @OneToMany
-    private List<tache> listTaches;
-*/
+    private String date;
+    private String nomProduit;
+    private String fournisseur;
+    private float quantity;
+    private float prixU;
+    public float montant;
+
 }

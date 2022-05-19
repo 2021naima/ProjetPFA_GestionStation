@@ -29,7 +29,10 @@ public class employe {
     @Setter
     @Column(name="tel")
     private String tel;
-
+    @Getter
+    @Setter
+    @Column(name="occupation")
+    private String occupation;
 
 
 }

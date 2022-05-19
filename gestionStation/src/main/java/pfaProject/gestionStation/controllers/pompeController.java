@@ -27,7 +27,7 @@ public class pompeController {
     @PutMapping("/update/{id}")
     public ResponseEntity updatePompe(@PathVariable Long id, @RequestBody pompe pompe) {
         pompe currentPompe = pompeRepo.findById(id).orElseThrow(RuntimeException::new);
-        currentPompe.setIdPompe(pompe.getIdPompe());
+        currentPompe.setId(pompe.getId());
       //  currentPompe.setType(produit.getType());
        // currentPompe.setPrixU(produit.getPrixU());
        // currentPompe.setQuantiteRestante(produit.getQuantiteRestante());

@@ -12,18 +12,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-public class tache {
+public class Recap {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String description;
-    private String day;
-    private String mounth;
-    private String year;
-    private String hour;
-
-
-
-
+    private String date;
+    private String heur;
+    private String codeCitern;
+    private String typeCarburant;
+    private float quantiteAjout;
+    private String fournisseur;
+    private float prixU;
+    private float montantTotal;
 }

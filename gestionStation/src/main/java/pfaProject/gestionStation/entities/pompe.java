@@ -15,10 +15,12 @@ public class pompe {
     @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long idPompe;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "citerne")
+    private Long id;
+    @Column(name = "code", nullable = false)
+    private Long code;
+    @ManyToOne(fetch = FetchType.EAGER)
     private citerne citerne;
+
 
 
 

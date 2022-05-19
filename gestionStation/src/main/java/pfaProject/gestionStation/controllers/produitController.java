@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pfaProject.gestionStation.entities.produit;
 import pfaProject.gestionStation.repositories.produitRepo;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = { "http://localhost:3000" })
 @RestController
@@ -17,6 +18,10 @@ public class produitController {
     public List<produit> getProduit(){
         return produitRepo.findAll();
     }
+    @GetMapping("/produits/{id}")
+    public Optional<produit> getProduitById(@PathVariable Long id){
+        return produitRepo.findById(id);
+    }
 
     @PostMapping("/AddProduit")
     public List<produit> addProduct (@RequestBody produit prod){
@@ -24,7 +29,7 @@ public class produitController {
         return produitRepo.findAll();
     }
 
-    @PutMapping("/update/{id}")
+    @PostMapping("/update/{id}")
     public ResponseEntity updateProduct(@PathVariable Long id, @RequestBody produit produit) {
         produit currentProduct = produitRepo.findById(id).orElseThrow(RuntimeException::new);
         currentProduct.setDesignation(produit.getDesignation());

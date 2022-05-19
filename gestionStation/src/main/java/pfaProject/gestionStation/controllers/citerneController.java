@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import pfaProject.gestionStation.entities.citerne;
-import pfaProject.gestionStation.entities.produit;
+
 import pfaProject.gestionStation.repositories.citerneRepo;
 
 import java.util.List;
@@ -24,20 +24,19 @@ public class citerneController {
         citernRepo.save(citerne);
         return citernRepo.findAll();
     }
-/*    @PutMapping("/update/{id}")
-    public ResponseEntity updateProduct(@PathVariable Long id, @RequestBody produit produit) {
-        produit currentProduct = produitRepo.findById(id).orElseThrow(RuntimeException::new);
-        currentProduct.setDesignation(produit.getDesignation());
-        currentProduct.setType(produit.getType());
-        currentProduct.setPrixU(produit.getPrixU());
-        currentProduct.setQuantiteRestante(produit.getQuantiteRestante());
-        currentProduct = produitRepo.save(produit);
+   @PutMapping("/update/{id}")
+    public ResponseEntity updateCiterne(@PathVariable Long id, @RequestBody citerne citerne) {
+       citerne currentCiterne = citernRepo.findById(id).orElseThrow(RuntimeException::new);
+       currentCiterne.setCode(citerne.getCode());
+       currentCiterne.setCapacite(citerne.getCapacite());
 
-        return  ResponseEntity.ok(currentProduct);
+       currentCiterne = citernRepo.save(citerne);
+
+        return  ResponseEntity.ok(currentCiterne);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity deleteProduct(@PathVariable Long id) {
-        produitRepo.deleteById(id);
+    public ResponseEntity deleteCiterne(@PathVariable Long id) {
+        citernRepo.deleteById(id);
         return ResponseEntity.ok().build();
-    }*/
+    }
 }

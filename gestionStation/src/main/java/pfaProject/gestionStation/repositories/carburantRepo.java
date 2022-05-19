@@ -5,4 +5,5 @@ import pfaProject.gestionStation.entities.carburant;
 
 
 public interface carburantRepo extends JpaRepository<carburant,Long> {
+    carburant findByNomProduit(String nomProduit);
 }

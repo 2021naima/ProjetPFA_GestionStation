@@ -10,6 +10,8 @@ import javax.persistence.*;
 @Builder
 @Entity
 public class produit {
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -17,7 +19,7 @@ public class produit {
     @Getter
     @Setter
     @Column(name="code")
-    private String codeProduit;
+    private String code;
     @Getter
     @Setter
     @Column(name="designation")
