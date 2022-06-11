@@ -22,4 +22,10 @@ public class employeServiceImplement implements employeService {
     employeRepo.findById(id);
     return null;
   }
+
+  @Override
+  public Long count() {
+    return employeRepo.count();
+  }
+
 }

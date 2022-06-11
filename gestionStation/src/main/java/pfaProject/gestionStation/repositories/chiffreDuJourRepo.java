@@ -2,9 +2,8 @@ package pfaProject.gestionStation.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pfaProject.gestionStation.entities.citerne;
+import pfaProject.gestionStation.entities.ChiffreDuJour;
 @Repository
-public interface citerneRepo extends JpaRepository<citerne,Long> {
+public interface chiffreDuJourRepo extends JpaRepository<ChiffreDuJour,Long> {
 
-   public citerne findByCode(String code);
 }

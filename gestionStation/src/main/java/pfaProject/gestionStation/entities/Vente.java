@@ -12,17 +12,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Achat {
+public class Vente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private String date;
     private String heur;
+    private String codeVolucompteur;
     private String nomProduit;
-    private String fournisseur;
-    private float quantity;
+    private String client;
+    private float quantiteVendu;
     private float prixU;
     public float montant;
-
 }

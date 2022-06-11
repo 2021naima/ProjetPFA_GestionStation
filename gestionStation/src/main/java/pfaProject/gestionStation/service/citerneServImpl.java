@@ -20,5 +20,16 @@ public class citerneServImpl implements citerneService{
     public citerne getByCode(String code) {
        return citerneRepo.findByCode(code);
     }
+
+    @Override
+    public void retrancherStock(String code, float quantite) {
+        citerne C=citerneRepo.findByCode(code);
+        C.setStockRestant(C.getStockRestant()-quantite);
+    }
+
+    @Override
+    public citerne getById(Long id) {
+        return citerneRepo.findById(id).orElseThrow(RuntimeException::new);
+    }
 }
 

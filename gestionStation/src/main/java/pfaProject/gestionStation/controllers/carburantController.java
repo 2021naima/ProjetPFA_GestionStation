@@ -28,7 +28,7 @@ public class carburantController {
     public ResponseEntity updateCarburant(@PathVariable Long id, @RequestBody carburant carburant) {
         carburant currentCarburant = carburantRepo.findById(id).orElseThrow(RuntimeException::new);
         currentCarburant.setNomProduit(carburant.getNomProduit());
-        currentCarburant.setQuantite(carburant.getQuantite());
+        currentCarburant.setQuantiteStock(carburant.getQuantiteStock());
         currentCarburant.setPrixU(carburant.getPrixU());
         currentCarburant = carburantRepo.save(carburant);
 

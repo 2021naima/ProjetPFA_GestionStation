@@ -11,7 +11,7 @@ public class carburantServiceImpl implements carburantService{
     @Override
     public void addStock(String nomProduit, float ajouter, float prixU) {
        carburant C= carburantRepo.findByNomProduit(nomProduit);
-       C.setQuantite(C.getQuantite()+ajouter);
+       C.setQuantiteStock(C.getQuantiteStock()+ajouter);
        C.setPrixU(prixU);
         carburantRepo.save(C);
     }

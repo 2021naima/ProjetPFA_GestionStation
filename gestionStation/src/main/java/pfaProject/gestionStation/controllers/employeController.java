@@ -49,5 +49,9 @@ public class employeController {
         return employeRepo.findById(id);
     }
 
+    @GetMapping("/number")
+    public Long count(){
+        return employeRepo.count();
+    }
 
 }

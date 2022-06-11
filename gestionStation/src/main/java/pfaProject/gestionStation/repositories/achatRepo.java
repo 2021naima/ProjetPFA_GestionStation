@@ -13,5 +13,6 @@ public interface achatRepo extends JpaRepository<Achat,Long> {
      Optional<Achat> findById(Long id);
      List<Achat> findByNomProduit(String nomProduit);
      List<Achat> findByFournisseur(String fournisseur);
+     void deleteById(Long id);
 
 }

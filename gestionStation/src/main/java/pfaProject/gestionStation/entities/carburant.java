@@ -22,7 +22,7 @@ public class carburant {
     private float prixU;
 
     @Column(name = "quantite", nullable = false)
-    private float quantite;
+    private float quantiteStock;
 
 
 

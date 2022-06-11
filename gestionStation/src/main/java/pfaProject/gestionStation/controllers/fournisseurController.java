@@ -38,4 +38,8 @@ public class fournisseurController {
         fournisserRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
+    @GetMapping("/count")
+    public Long nbrFournisseurs(){
+        return fournisserRepository.count();
+    }
 }
